@@ -251,15 +251,16 @@
 			}
 			</style>
 			<script>
-				var iframeElem = document.getElementById('receiver');
+			//     window.addEventListener('message', receiveMessage);
+			    	var iframeElem = document.getElementById('receiver');
 
-				var resetConversation = function () {
-				  console.log("Reset conversation")
-				  iframeElem.contentWindow.postMessage({
-					'actionType': 'resetConversation',
-					'actionData': {}
-				  },  config.iframeSrc);
-				};
+			    	var resetConversation = function () {
+			      		console.log("Reset conversation")
+			      		iframeElem.contentWindow.postMessage({
+						'actionType': 'resetConversation',
+						'actionData': {}
+			      		},  config.iframeSrc);
+			    	};
 				
 				var clientConfig = {
 				  iframeSrc: 'https://aspendental.dev.amelia.com/Amelia/ui/aspenpicdev?embed=iframe&domainCode=aspenpicdev',
